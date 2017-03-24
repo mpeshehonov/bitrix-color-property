@@ -1,0 +1,11 @@
+{
+  "name": "Maximaster/jscolor.ForBitrix",
+  "description": "This is optimized jscolor colorpicker for using in Bitrix like a property of elements and etc.",
+  "version": "1.0",
+  "require": {
+    "php": ">=5.6.0"
+  },
+  "autoload": {
+    "classmap": ["каталог-с-вашими-файлами/", "или-отдельно-каждый-файл.php"]
+  }
+}
