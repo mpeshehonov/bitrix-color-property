@@ -1,3 +1,0 @@
-require_once($_SERVER['DOCUMENT_ROOT']."/local/classes/CustomPropertyColor.php");
-AddEventHandler('iblock', 'OnIBlockPropertyBuildList', ['CustomPropertyColor', 'GetIBlockPropertyDescription']);
-AddEventHandler('main', 'OnUserTypeBuildList', ['CustomPropertyColor', 'GetUserTypeDescription']);

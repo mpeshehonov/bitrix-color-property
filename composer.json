@@ -1,11 +1,42 @@
 {
   "name": "Maximaster/jscolor.ForBitrix",
   "description": "This is optimized jscolor colorpicker for using in Bitrix like a property of elements and etc.",
+  "keywords": ["bitrix", "1С Битрикс", "максимастер", "пользовательские свойства"],
   "version": "1.0",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Пешехонов Максим",
+      "email": "m.peshehonov@maximaster.ru",
+      "role": "Developer"
+    },
+    {
+      "name": "Журов Михаил",
+      "email": "m.zhurov@maximaster.ru",
+      "role": "Leading"
+    }
+  ],
   "require": {
     "php": ">=5.6.0"
   },
   "autoload": {
-    "classmap": ["каталог-с-вашими-файлами/", "или-отдельно-каждый-файл.php"]
+    "files": ["src/lib/functions.php"],
+    "psr-4": {
+      "Maximaster\\": "src/Maximaster/"
+    }
+  },
+  "scripts": {
+    "post-package-install": [
+      "Library\\Tools::prePackageInstallOrUpdate"
+    ],
+    "post-package-update": [
+      "Library\\Tools::prePackageInstallOrUpdate"
+    ],
+    "pre-package-uninstall": [
+      "Library\\Tools::prePackageUninstall"
+    ],
+    "init": [
+      "Library\\Tools::init"
+    ]
   }
 }
