@@ -18,7 +18,7 @@ class ColorProperty
     public function getDescription()
     {
         static::initJsConfig();
-        \CUtil::InitJSCore(['jscolor_core', 'jscolor_events']);
+        \CUtil::InitJSCore(['jscolor', 'jscolor_events']);
         return [
             //для пользовательских полей
             //*начало*
@@ -48,7 +48,7 @@ class ColorProperty
     protected function initJsConfig()
     {
         $arJsConfig = [
-            'jscolor_core' => [
+            'jscolor' => [
                 'js' => '/bitrix/js/jscolor.forBitrix/jscolor.min.js'
             ],
             'jscolor_events' => [
