@@ -1,7 +1,7 @@
 {
   "name": "maximasterru/jscolor.forbitrix",
   "description": "Кастомное свойство типа цвет для Bitrix с использованием jscolor.",
-  "keywords": ["bitrix", "1С Битрикс", "максимастер", "пользовательские свойства"],
+  "keywords": ["bitrix", "1С Битрикс", "максимастер", "jscolor"],
   "version": "1.0",
   "license": "MIT",
   "authors": [
@@ -20,20 +20,7 @@
     "php": ">=5.6.0"
   },
   "autoload": {
-    "psr-4": {"Maximaster\\Properties\\": "src/"}
-  },
-  "scripts": {
-    "post-package-install": [
-      "Maximaster\\Properties\\Tools::prePackageInstallOrUpdate"
-    ],
-    "post-package-update": [
-      "Maximaster\\Properties\\Tools::prePackageInstallOrUpdate"
-    ],
-    "pre-package-uninstall": [
-      "Maximaster\\Properties\\Tools::prePackageUninstall"
-    ],
-    "init": [
-      "Maximaster\\Properties\\Tools::init"
-    ]
+    "files": ["src/handler.php"],
+    "psr-4": {"Maximaster\\Properties\\": "src/classes/"}
   }
 }

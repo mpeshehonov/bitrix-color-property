@@ -1,0 +1,3 @@
+<?
+$MESS['CUSTOM_PROPERTY_COLOR:USE_DEFAULT_VALUE'] = 'Use default value:';
+$MESS['CUSTOM_PROPERTY_COLOR:DESCRIPTION'] = '[Maximaster] Color 2.0';
