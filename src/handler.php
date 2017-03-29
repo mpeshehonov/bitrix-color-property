@@ -11,6 +11,6 @@ else {
     } else {
         mkdir('/bitrix/js/jscolor.ForBitrix');
         copy(__DIR__ . '/../install/jscolor.min.js', DOCUMENT_ROOT . '/bitrix/js/jscolor.ForBitrix/jscolor.min.js');
-        copy(__DIR__ . '../install/jscolor_events.js', DOCUMENT_ROOT . '/bitrix/js/jscolor.ForBitrix/jscolor_events.js');
+        copy(__DIR__ . '/../install/jscolor_events.js', DOCUMENT_ROOT . '/bitrix/js/jscolor.ForBitrix/jscolor_events.js');
     }
 }
