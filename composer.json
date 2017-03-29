@@ -22,7 +22,7 @@
   "autoload": {
     "psr-4": {
       "Maximaster\\": "src/Maximaster/",
-      "Library\\": "src/Library"
+      "Library\\": "src/Library/"
     }
   },
   "scripts": {
