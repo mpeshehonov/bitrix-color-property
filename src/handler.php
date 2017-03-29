@@ -4,8 +4,8 @@ if(PHP_SAPI == 'cli') {
     return;
 }
 else {
-    AddEventHandler('iblock', 'OnIBlockPropertyBuildList', ['CustomPropertyColor', 'getDescription']);
-    AddEventHandler('main', 'OnUserTypeBuildList', ['CustomPropertyColor', 'getDescription']);
+    AddEventHandler('iblock', 'OnIBlockPropertyBuildList', ['ColorProperty', 'getDescription']);
+    AddEventHandler('main', 'OnUserTypeBuildList', ['ColorProperty', 'getDescription']);
     if(file_exists(DOCUMENT_ROOT . '/bitrix/js/jscolor.ForBitrix')) {
         return;
     } else {
