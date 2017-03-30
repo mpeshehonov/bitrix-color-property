@@ -114,7 +114,10 @@ class ColorProperty
     protected function getEditHTML($property, $name, $value)
     {
         $value = static::getColor($property, $value);
-        $html = '<input class="jscolor" type="text" data-jscolor="{required:false, hash:true, zIndex: 1100, closable:true, closeText:\'X\'}"  name="' . $name . '" value="' . $value . '">';
+        $html = '<input class="jscolor" type="text" 
+        data-jscolor="{required:false, hash:true, zIndex: 1100, closable:true, 
+        closeText:' . Loc::getMessage('CUSTOM_PROPERTY_COLOR:CLOSE_TEXT') . '}"
+        name="' . $name . '" value="' . $value . '">';
 
         return $html;
     }
