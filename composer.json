@@ -3,7 +3,6 @@
   "description": "Кастомное свойство типа цвет для Bitrix с использованием jscolor.",
   "keywords": ["bitrix", "1С Битрикс", "максимастер", "jscolor"],
   "homepage": "https://github.com/mpeshehonov/jscolor.forbitrix",
-  "version": "1.0",
   "license": "MIT",
   "authors": [
     {
