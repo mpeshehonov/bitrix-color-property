@@ -21,6 +21,6 @@
   },
   "autoload": {
     "files": ["tools/handler.php"],
-    "psr-4": {"Maximaster\\": "src/Maximaster/"}
+    "psr-4": {"Maximaster\\Properties\\": "src/"}
   }
 }
