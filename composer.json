@@ -20,7 +20,7 @@
     "php": ">=5.6.0"
   },
   "autoload": {
-    "files": ["src/handler.php"],
+    "files": ["tools/handler.php"],
     "psr-4": {"Maximaster\\": "src/Maximaster/"}
   }
 }

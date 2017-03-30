@@ -1,6 +1,5 @@
 <?php
 
-namespace Maximaster\Properties;
 
 use Bitrix\Main\Localization\Loc;
 
@@ -116,7 +115,7 @@ class ColorProperty
         $value = static::getColor($property, $value);
         $html = '<input class="jscolor" type="text" 
         data-jscolor="{required:false, hash:true, zIndex: 1100, closable:true, 
-        closeText:' . Loc::getMessage('CUSTOM_PROPERTY_COLOR:CLOSE_TEXT') . '}"
+        closeText:\'' . Loc::getMessage('CUSTOM_PROPERTY_COLOR:CLOSE_TEXT') . '\'}"
         name="' . $name . '" value="' . $value . '">';
 
         return $html;
