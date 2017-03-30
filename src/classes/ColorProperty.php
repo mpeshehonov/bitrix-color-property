@@ -49,10 +49,10 @@ class ColorProperty
     {
         $arJsConfig = [
             'jscolor' => [
-                'js' => '/bitrix/js/jscolor.forBitrix/jscolor.min.js'
+                'js' => '/bitrix/js/jscolor.ForBitrix/jscolor.min.js'
             ],
             'jscolor_events' => [
-                'js' => '/bitrix/js/jscolor.forBitrix/jscolor_events.js'
+                'js' => '/bitrix/js/jscolor.ForBitrix/jscolor_events.js'
             ],
         ];
         foreach ($arJsConfig as $ext => $arExt) {
