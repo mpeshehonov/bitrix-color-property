@@ -9,35 +9,38 @@ BX(function () {
 
     BX.addCustomEvent('onFixedNodeChangeState', function () {
         installJsColor(className);
-        addNewJsColor();
+        multyJsColorHandler();
     });
     BX.addCustomEvent('onAjaxSuccess', function () {
         installJsColor(className);
     });
     BX.addCustomEvent('onAdminTabsChange', function () {
         installJsColor(className);
-        addNewJsColor();
+        multyJsColorHandler();
     });
 
-    var addNewJsColor = function () {
+    var multyJsColorHandler = function () {
         document.querySelector('body').onclick = function(event) {
             var target = event.target;
 
-            if(!target.matches('input[type="button"]')) {
-                return;
+            if(target.matches('input[type="button"]')) {
+
+                var parentRow = target.parentNode.parentNode;
+
+                var previousRow = parentRow.previousSibling;
+
+                var jsColorInput = previousRow.firstChild.firstChild;
+
+                if(!jsColorInput.matches('input[type="text"].jscolor')) {
+                    return;
+                }
+
+                installJsColor(className);
+            } else if(target.matches('input[type="text"].jscolor')) {
+                target.addEventListener('keydown', function () {
+                    target.hide();
+                })
             }
-
-            var parentRow = target.parentNode.parentNode;
-
-            var previousRow = parentRow.previousSibling;
-
-            var jsColorInput = previousRow.firstChild.firstChild;
-
-            if(!jsColorInput.matches('input[type="text"].jscolor')) {
-                return;
-            }
-
-            installJsColor(className);
 
         };
     }
