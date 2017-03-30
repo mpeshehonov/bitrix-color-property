@@ -1,6 +1,6 @@
 <?php
 
-namespace Maximaster\Properties;
+namespace Maximasterru\Properties;
 
 use Bitrix\Main\Localization\Loc;
 
