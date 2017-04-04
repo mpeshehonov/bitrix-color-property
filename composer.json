@@ -1,5 +1,5 @@
 {
-  "name": "maximasterru/jscolor.forbitrix",
+  "name": "peshek/jscolor.forbitrix",
   "description": "Кастомное свойство типа цвет для Bitrix с использованием jscolor.",
   "keywords": ["bitrix", "1С Битрикс", "максимастер", "jscolor"],
   "homepage": "https://github.com/mpeshehonov/jscolor.forbitrix",
@@ -21,7 +21,7 @@
   },
   "autoload": {
     "psr-4": {
-      "MaximasterRU\\Properties\\": "src"
+      "Peshek\\Properties\\": "src/"
     },
     "files": ["tools/handler.php"]
   }
