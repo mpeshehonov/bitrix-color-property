@@ -21,7 +21,7 @@
   },
   "autoload": {
     "psr-4": {
-      "MaximasterRU\\": "src/MaximasterRU/"
+      "MaximasterRU\\Properties\\": "src"
     },
     "files": ["tools/handler.php"]
   }
