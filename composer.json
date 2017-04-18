@@ -21,7 +21,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Peshek\\Properties\\": "src/"
+      "Peshek\\Properties\\": "src/Properties/"
     },
     "files": ["tools/handler.php"]
   }
