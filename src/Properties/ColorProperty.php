@@ -29,6 +29,7 @@ class ColorProperty
             'DESCRIPTION'           => Loc::getMessage('CUSTOM_PROPERTY_COLOR:DESCRIPTION'),
             'USER_TYPE'             => 'Color',
             'PROPERTY_TYPE'         => 'S',
+            'GetDBColumnType'       => [static::class, 'getDBColumnType'],
             'GetAdminListEditHTML'  => [static::class, 'getAdminListEditHTML'],
             'GetAdminListViewHTML'  => [static::class, 'getAdminListViewHTML'],
             'GetEditFormHTML'       => [static::class, 'getEditFormHTML'],
@@ -102,6 +103,27 @@ class ColorProperty
         return empty($value) && $property['USER_TYPE_SETTINGS']['USE_DEFAULT_VALUE'] == 'Y' ?
             $property['DEFAULT_VALUE'] :
             $value;
+    }
+
+    /**
+     * Эта функция вызывается при добавлении нового свойства.
+     *
+     * @param array $arUserField Массив описывающий поле
+     * @return string
+     * @static
+     */
+    function getDBColumnType($property)
+    {
+        global $DB;
+        switch(strtolower($DB->type))
+        {
+            case "mysql":
+                return "text";
+            case "oracle":
+                return "varchar2(2000 char)";
+            case "mssql":
+                return "varchar(2000)";
+        }
     }
 
     /**
