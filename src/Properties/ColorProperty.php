@@ -23,7 +23,7 @@ class ColorProperty
             //для пользовательских полей
             //*начало*
             'USER_TYPE_ID'          => 'Color',
-            'CLASS_NAME'            => CLASS_NAME_OF_JSCOLOR_USERTYPE,
+            'CLASS_NAME'            => __CLASS__,
             'BASE_TYPE'             => 'string',
             //*конец*
             'DESCRIPTION'           => Loc::getMessage('CUSTOM_PROPERTY_COLOR:DESCRIPTION'),
@@ -50,10 +50,10 @@ class ColorProperty
     {
         $arJsConfig = [
             'jscolor' => [
-                'js' => PATH_TO_JSCOLORMIN
+                'js' => PESHEK_PATH_TO_JSCOLORMIN
             ],
             'jscolor_events' => [
-                'js' => PATH_TO_JSCOLOREVENTS
+                'js' => PESHEK_PATH_TO_JSCOLOREVENTS
             ],
         ];
         foreach ($arJsConfig as $ext => $arExt) {

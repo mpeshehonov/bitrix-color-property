@@ -36,10 +36,6 @@ BX(function () {
                 }
 
                 installJsColor(className);
-            } else if(target.matches('input[type="text"].jscolor')) {
-                target.addEventListener('keydown', function () {
-                    jscolor.hide();
-                })
             }
 
         };
