@@ -23,7 +23,7 @@ class ColorProperty
             //для пользовательских полей
             //*начало*
             'USER_TYPE_ID'          => 'Color',
-            'CLASS_NAME'            => 'ColorProperty',
+            'CLASS_NAME'            => '\\Peshek\\Properties\\ColorProperty',
             'BASE_TYPE'             => 'string',
             //*конец*
             'DESCRIPTION'           => Loc::getMessage('CUSTOM_PROPERTY_COLOR:DESCRIPTION'),
@@ -108,7 +108,7 @@ class ColorProperty
     /**
      * Эта функция вызывается при добавлении нового свойства.
      *
-     * @param array $arUserField Массив описывающий поле
+     * @param array $property Массив описывающий поле
      * @return string
      * @static
      */
