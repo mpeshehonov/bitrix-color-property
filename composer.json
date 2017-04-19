@@ -23,7 +23,8 @@
   "autoload": {
     "psr-4": {
       "Peshek\\": "src/Peshek/"
-    }
+    },
+    "files": ["tools/handler.php"]
   },
   "extra": {
     "composer-events-handler": [
