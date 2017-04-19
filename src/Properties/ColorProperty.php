@@ -29,17 +29,16 @@ class ColorProperty
             'DESCRIPTION'           => Loc::getMessage('CUSTOM_PROPERTY_COLOR:DESCRIPTION'),
             'USER_TYPE'             => 'Color',
             'PROPERTY_TYPE'         => 'S',
-            'GetDBColumnType'       => [static::class, 'getDBColumnType'],
-            'GetAdminListEditHTML'  => [static::class, 'getAdminListEditHTML'],
-            'GetAdminListViewHTML'  => [static::class, 'getAdminListViewHTML'],
-            'GetEditFormHTML'       => [static::class, 'getEditFormHTML'],
-            'GetPropertyFieldHtml'  => [static::class, 'getPropertyFieldHtml'],
-            'GetAdminFilterHTML'    => [static::class, 'getAdminFilterHTML'],
-            'GetFilterHTML'         => [static::class, 'getFilterHTML'],
-            'PrepareSettings'       => [static::class, 'prepareSettings'],
-            'GetSettingsHTML'       => [static::class, 'getSettingsHTML'],
-            'ConvertToDB'           => [static::class, 'convertToDB'],
-            'ConvertFromDB'         => [static::class, 'convertFromDB']
+            'GetAdminListEditHTML'  => [__CLASS__, 'getAdminListEditHTML'],
+            'GetAdminListViewHTML'  => [__CLASS__, 'getAdminListViewHTML'],
+            'GetEditFormHTML'       => [__CLASS__, 'getEditFormHTML'],
+            'GetPropertyFieldHtml'  => [__CLASS__, 'getPropertyFieldHtml'],
+            'GetAdminFilterHTML'    => [__CLASS__, 'getAdminFilterHTML'],
+            'GetFilterHTML'         => [__CLASS__, 'getFilterHTML'],
+            'PrepareSettings'       => [__CLASS__, 'prepareSettings'],
+            'GetSettingsHTML'       => [__CLASS__, 'getSettingsHTML'],
+            'ConvertToDB'           => [__CLASS__, 'convertToDB'],
+            'ConvertFromDB'         => [__CLASS__, 'convertFromDB']
         ];
     }
 
@@ -103,27 +102,6 @@ class ColorProperty
         return empty($value) && $property['USER_TYPE_SETTINGS']['USE_DEFAULT_VALUE'] == 'Y' ?
             $property['DEFAULT_VALUE'] :
             $value;
-    }
-
-    /**
-     * Эта функция вызывается при добавлении нового свойства.
-     *
-     * @param array $property Массив описывающий поле
-     * @return string
-     * @static
-     */
-    function getDBColumnType($property)
-    {
-        global $DB;
-        switch(strtolower($DB->type))
-        {
-            case "mysql":
-                return "text";
-            case "oracle":
-                return "varchar2(2000 char)";
-            case "mssql":
-                return "varchar(2000)";
-        }
     }
 
     /**
