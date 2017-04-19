@@ -17,12 +17,17 @@
     }
   ],
   "require": {
-    "php": ">=5.6.0"
+    "php": ">=5.6.0",
+    "comodojo/composer-events-handler": "*"
   },
   "autoload": {
     "psr-4": {
-      "Peshek\\Properties\\": "src/Properties/"
-    },
-    "files": ["tools/handler.php"]
+      "Peshek\\": "src/Peshek/"
+    }
+  },
+  "extra": {
+    "composer-events-handler": [
+      "Peshek\\BitrixColorProperty\\BitrixColorPropertySetup"
+    ]
   }
 }

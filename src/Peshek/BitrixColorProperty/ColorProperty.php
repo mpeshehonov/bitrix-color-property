@@ -1,6 +1,6 @@
 <?php
 
-namespace Peshek\Properties;
+namespace Peshek\BitrixColorProperty;
 
 use Bitrix\Main\Localization\Loc;
 
