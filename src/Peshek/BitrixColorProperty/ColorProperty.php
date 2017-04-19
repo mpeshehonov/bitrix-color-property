@@ -9,7 +9,7 @@ Loc::loadMessages(__FILE__);
 /**
  * Класс, который отвечает за отображение кастомного свойства типа "Цвет"
  */
-class ColorProperty
+class BitrixColorProperty
 {
     /**
      * Получение описания пользовательского свойства
