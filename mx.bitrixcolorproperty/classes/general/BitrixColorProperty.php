@@ -1,6 +1,6 @@
 <?php
 
-namespace Peshek\BitrixColorProperty;
+namespace BitrixColorProperty;
 
 use Bitrix\Main\Localization\Loc;
 
@@ -17,42 +17,39 @@ class BitrixColorProperty
      */
     public function getDescription()
     {
-        static::initJsConfig();
+        static::registerJS();
         \CUtil::InitJSCore(['jscolor', 'jscolor_events']);
         return [
             //для пользовательских полей
             //*начало*
             'USER_TYPE_ID'          => 'Color',
-            'CLASS_NAME'            => __CLASS__,
+            'CLASS_NAME'            => static::class,
             'BASE_TYPE'             => 'string',
             //*конец*
             'DESCRIPTION'           => Loc::getMessage('CUSTOM_PROPERTY_COLOR:DESCRIPTION'),
             'USER_TYPE'             => 'Color',
             'PROPERTY_TYPE'         => 'S',
-            'GetAdminListEditHTML'  => [__CLASS__, 'getAdminListEditHTML'],
-            'GetAdminListViewHTML'  => [__CLASS__, 'getAdminListViewHTML'],
-            'GetEditFormHTML'       => [__CLASS__, 'getEditFormHTML'],
-            'GetPropertyFieldHtml'  => [__CLASS__, 'getPropertyFieldHtml'],
-            'GetAdminFilterHTML'    => [__CLASS__, 'getAdminFilterHTML'],
-            'GetFilterHTML'         => [__CLASS__, 'getFilterHTML'],
-            'PrepareSettings'       => [__CLASS__, 'prepareSettings'],
-            'GetSettingsHTML'       => [__CLASS__, 'getSettingsHTML'],
-            'ConvertToDB'           => [__CLASS__, 'convertToDB'],
-            'ConvertFromDB'         => [__CLASS__, 'convertFromDB']
+            'GetAdminListEditHTML'  => [static::class, 'getAdminListEditHTML'],
+            'GetAdminListViewHTML'  => [static::class, 'getAdminListViewHTML'],
+            'GetEditFormHTML'       => [static::class, 'getEditFormHTML'],
+            'GetPropertyFieldHtml'  => [static::class, 'getPropertyFieldHtml'],
+            'GetAdminFilterHTML'    => [static::class, 'getAdminFilterHTML'],
+            'GetFilterHTML'         => [static::class, 'getFilterHTML'],
+            'PrepareSettings'       => [static::class, 'prepareSettings'],
+            'GetSettingsHTML'       => [static::class, 'getSettingsHTML'],
+            'ConvertToDB'           => [static::class, 'convertToDB'],
+            'ConvertFromDB'         => [static::class, 'convertFromDB']
         ];
     }
 
-    /**
-     * Регистрация JS для последующего подключения
-     */
-    protected function initJsConfig()
+    protected function registerJS()
     {
         $arJsConfig = [
             'jscolor' => [
-                'js' => PESHEK_PATH_TO_JSCOLORMIN
+                'js' => '/bitrix/js/BitrixColorProperty/jscolor.min.js'
             ],
             'jscolor_events' => [
-                'js' => PESHEK_PATH_TO_JSCOLOREVENTS
+                'js' => '/bitrix/js/BitrixColorProperty/jscolor_events.js'
             ],
         ];
         foreach ($arJsConfig as $ext => $arExt) {
