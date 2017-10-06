@@ -1,6 +1,6 @@
 <?php
 
-namespace BitrixColorProperty;
+namespace Maximaster;
 
 use Bitrix\Main\Localization\Loc;
 
