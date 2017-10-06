@@ -1,1 +1,3 @@
-<?require_once('classes/general/BitrixColorProperty.php');
+<?
+
+require_once('classes/general/BitrixColorProperty.php');
