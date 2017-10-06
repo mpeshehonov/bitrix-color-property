@@ -44,15 +44,14 @@ class BitrixColorProperty
 
     protected function registerJS()
     {
-
-        $directoryWithModule = file_exists(SITE_DIR . '/bitrix/mx.bitrixcolorproperty/') ? '/bitrix' : '/local';
+        $directoryWithModule = file_exists($_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/mx.bitrixcolorproperty') ? '/bitrix' : '/local';
 
         $arJsConfig = [
             'jscolor' => [
-                'js' => SITE_DIR . $directoryWithModule . '/mx.bitrixcolorproperty/js/jscolor.min.js'
+                'js' => $_SERVER['DOCUMENT_ROOT'] . $directoryWithModule . '/modules/mx.bitrixcolorproperty/js/jscolor.min.js'
             ],
             'jscolor_events' => [
-                'js' => SITE_DIR . $directoryWithModule . '/mx.bitrixcolorproperty/js/jscolor_events.js'
+                'js' => $_SERVER['DOCUMENT_ROOT'] . $directoryWithModule . '/modules/mx.bitrixcolorproperty/js/jscolor_events.js'
             ],
         ];
         foreach ($arJsConfig as $ext => $arExt) {
