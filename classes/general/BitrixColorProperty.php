@@ -48,10 +48,10 @@ class BitrixColorProperty
 
         $arJsConfig = [
             'jscolor' => [
-                'js' => $_SERVER['DOCUMENT_ROOT'] . $directoryWithModule . '/modules/mx.bitrixcolorproperty/js/jscolor.min.js'
+                'js' => $directoryWithModule . '/modules/mx.bitrixcolorproperty/js/jscolor.min.js'
             ],
             'jscolor_events' => [
-                'js' => $_SERVER['DOCUMENT_ROOT'] . $directoryWithModule . '/modules/mx.bitrixcolorproperty/js/jscolor_events.js'
+                'js' => $directoryWithModule . '/modules/mx.bitrixcolorproperty/js/jscolor_events.js'
             ],
         ];
         foreach ($arJsConfig as $ext => $arExt) {
